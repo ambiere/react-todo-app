@@ -3,8 +3,6 @@ import './App.css'
 import TodoList from './TodoList';
 import { GetTodosReducer } from './TodoReducer'
 import { createTodosCtx } from './TodoContext'
-// import GitHub from './GitHub'
-// import UserForm from './UserForm'
 
 function App() {
   const [ , TodosCtxProvider, ] = createTodosCtx()
@@ -15,8 +13,6 @@ function App() {
       <TodosCtxProvider value={{ state, dispatch }}>
         <TodoList />
       </TodosCtxProvider>
-      {/* <UserForm /> */}
-      {/* <GitHub /> */}
     </>
   )
 }
