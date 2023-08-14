@@ -1,0 +1,24 @@
+@layer form {
+  .form {
+    display: flex;
+    flex-basis: 1;
+    justify-content: space-between;
+    gap: 0.6em;
+    max-width: 720px;
+    min-width: 480px;
+    padding-top: 0em;
+  }
+
+  .add-button {
+    padding: 0.6em 1.4em;
+    font-weight: 500;
+  }
+
+  .form .input-wrapper {
+    flex: 0.9;
+  }
+
+  .form .add-button {
+    flex: 0.1;
+  }
+}
