@@ -1,0 +1,6 @@
+@layer todo-title {
+  .todo-title {
+    flex: 1;
+    padding: 0;
+  }
+}
