@@ -1,0 +1,43 @@
+@layer todo-reminder {
+  .todo-reminder {
+    display: flex;
+    place-items: center;
+    position: relative;
+    width: 28px;
+    padding: 0.1em 0.5em;
+    height: 28px;
+    border: 1px solid rgba(128, 128, 128, 0.15);
+    background-color: #15141491;
+    border-radius: 6px;
+    outline: 2px solid transparent;
+    cursor: pointer;
+    word-spacing: normal;
+    word-break: keep-all;
+    white-space: pre;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .todo-reminder > span {
+    position: absolute;
+    display: flex;
+    place-items: center;
+    font-size: 0.8em;
+    inset: 0;
+    border: 1px solid rgba(128, 128, 128, 0.386);
+    background-color: #151515;
+    border-radius: 6px;
+    width: fit-content;
+    height: 28px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-20px, 33px);
+    padding: 0.4em 1em;
+    transition: all 0.5s ease;
+  }
+
+  .todo-reminder:hover > span {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-20px, 33px);
+  }
+}
