@@ -1,0 +1,22 @@
+@layer button {
+  .button {
+    appearance: none;
+    border: 1px solid rgba(128, 128, 128, 0.386);
+    background-color: #151414;
+    font-size: 1em;
+    font-family: inherit;
+    border-radius: 8px;
+    height: 40.2px;
+    cursor: pointer;
+    outline: 2px solid transparent;
+    transition: outline-color 250ms ease;
+  }
+
+  .button:hover {
+    background-color: rgba(128, 128, 128, 0.134);
+  }
+
+  .button:focus {
+    outline-color: gray;
+  }
+}
