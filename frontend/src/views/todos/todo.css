@@ -1,0 +1,41 @@
+@layer todo {
+  .todo-wrapper {
+    max-width: 100%;
+    min-width: 480px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* background: #000; */
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1em;
+    flex-basis: 1;
+    /* place-self: center; */
+  }
+
+  .todo {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1;
+    width: 400px;
+    height: 315px;
+    gap: 0.6em;
+    padding-block: 2em;
+    padding: 1.2em;
+    border-radius: 8px;
+    overflow: hidden;
+    /* border: 1px solid rgba(128, 128, 128, 0.136); */
+  }
+
+  .todo-wrapper > :not(:last-child) {
+    /* border-block-start: none; */
+    /* border-inline: none; */
+  }
+
+  .todo-main {
+    display: flex;
+    flex: 1;
+    gap: 4px;
+    justify-content: space-between;
+  }
+}
