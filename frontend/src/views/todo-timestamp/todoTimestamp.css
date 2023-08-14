@@ -1,0 +1,10 @@
+@layer todo-timestamp {
+  .todo-timestamp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-size: 0.8em;
+    color: rgba(128, 128, 128, 0.876);
+  }
+}
