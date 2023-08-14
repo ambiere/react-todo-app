@@ -4,7 +4,7 @@ import TodoCategory from "../todo-category/TodoCategory";
 import TodoControlBtn from "../todo-control-btn/TodoControlBtn";
 import TodoOption from "../todo-option/TodoOption";
 import TodoReminder from "../todo-reminder/TodoReminder";
-import TodoTimestamp from "../tod-timestamp/TodoTimestamp";
+import TodoTimestamp from "../todo-timestamp/TodoTimestamp";
 import TodoTitle from "../todo-title/TodoTitle";
 import "./todo.css";
 
