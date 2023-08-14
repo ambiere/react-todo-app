@@ -1,0 +1,22 @@
+@layer todo-control-btn {
+  .todo-control-btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6em;
+  }
+
+  .todo-control-btn > * {
+    padding: 0.6em 1.4em;
+    width: 50%;
+    white-space: pre;
+  }
+
+  /* .edit,
+  .delete {
+    width: 100px;
+  } */
+
+  .delete:focus {
+    outline-color: rgba(255, 0, 0, 0.32);
+  }
+}
