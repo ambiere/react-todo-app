@@ -1,0 +1,33 @@
+@layer todo-option {
+  .todo-option {
+    position: relative;
+  }
+
+  .option:focus + .modal {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-72px, 6px);
+  }
+
+  .modal-opened {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-72px, 6px);
+  }
+  .option {
+    display: flex;
+    place-items: center;
+    position: relative;
+    width: 28px;
+    padding: 0.1em 0.5em;
+    height: 28px;
+    border: 1px solid rgba(128, 128, 128, 0.386);
+    background-color: #151515;
+    border-radius: 6px;
+    cursor: pointer;
+    word-spacing: normal;
+    word-break: keep-all;
+    white-space: pre;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
