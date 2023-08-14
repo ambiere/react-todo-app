@@ -1,0 +1,65 @@
+@layer input {
+  .input-wrapper {
+    display: flex;
+    flex-basis: 1;
+    border: 1px solid rgba(128, 128, 128, 0.386);
+    background-color: #151414;
+    border-radius: 8px;
+    outline: 2px solid transparent;
+    transition: outline-color 250ms ease;
+  }
+
+  .input-wrapper:focus-within {
+    outline-color: gray;
+  }
+
+  .input {
+    appearance: none;
+    flex: 1;
+    padding: 0.6em 1em;
+    height: 40.2px;
+    font-family: inherit;
+    font-size: 1em;
+    background-color: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.135);
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-block: none;
+    border-inline-start: none;
+    transition: all 250ms;
+  }
+
+  .input:hover {
+    background-color: rgba(128, 128, 128, 0.134);
+  }
+
+  .input:focus {
+    outline: none;
+  }
+
+  .expand-input {
+    appearance: none;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 12%;
+    height: 100%;
+    border: none;
+    outline: 1px solid transparent;
+    border-radius: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+  }
+
+  .expand-input:hover {
+    background-color: rgba(128, 128, 128, 0.134);
+  }
+
+  .expand-input:hover path {
+    fill: white !important;
+    stroke: white !important;
+  }
+}
