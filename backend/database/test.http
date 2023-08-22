@@ -1,8 +1,16 @@
-POST http://localhost:3000/todos HTTP/1.1
+POST http://localhost:3001/todos HTTP/1.1
 content-type: application/json
 
 {
     "id": "{{$guid}}",
-    "text": "new todo"
+    "title": "Dev(proposal): Complete research proposal assigned",
+    "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse viverra placerat tortor. ",
+    "timestamp": {
+    "createdOn": "2023-09-11T21:00:00.000Z",
+    "dueOn": "2024-01-11T21:00:00.000Z"
+    },
+    "reminder": "2024-11-11T21:00:00.000Z",
+    "priority": "Important",
+    "category": "Personal"
 }
 
