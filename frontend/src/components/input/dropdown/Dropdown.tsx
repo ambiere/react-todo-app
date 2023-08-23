@@ -5,15 +5,16 @@ type DropdownPropsType = {
   options: string[];
   className: string;
   placeholder: string;
+  selectedOption: string | undefined;
 };
 
 type CurrentTarget = {
   currentTarget: EventTarget & HTMLDivElement;
 };
 
-function Dropdown({ options, className, placeholder }: DropdownPropsType) {
+function Dropdown({ selectedOption, options, className, placeholder }: DropdownPropsType) {
   const dropdownRef = useRef<HTMLDivElement | null>(null);
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState(selectedOption);
   const [indexSelected, setIndexSelected] = useState<number>();
 
   const handleSelection = (option: string) => {

@@ -1,22 +1,60 @@
 @layer button {
   .button {
     appearance: none;
-    border: 1px solid rgba(128, 128, 128, 0.386);
-    background-color: #151414;
-    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4em;
+    flex-basis: 1;
+    position: relative;
+    border: none;
+    background-color: var(--background-color-white);
+    font-size: 1.5em;
     font-family: inherit;
-    border-radius: 8px;
-    height: 40.2px;
+    height: 28px;
+    padding-inline: 0.8em;
+    width: fit-content;
     cursor: pointer;
     outline: 2px solid transparent;
     transition: outline-color 250ms ease;
   }
 
-  .button:hover {
-    background-color: rgba(128, 128, 128, 0.134);
+  .button::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 100%;
+    inset: 0;
+    border: 1px solid var(--border-color-light);
+    opacity: 0.5;
+    border-radius: 5px;
   }
 
-  .button:focus {
-    outline-color: gray;
+  .button > *:first-child {
+    height: 28px;
+    width: 28px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+  }
+
+  .button > *:last-child {
+    height: 28px;
+    flex: 0.9;
+    white-space: pre;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button > *:first-child:is(:empty) {
+    display: none;
+  }
+
+  .button > *:last-child:is(:empty) {
+    display: none;
+  }
+
+  .button:hover {
+    background-color: rgba(128, 128, 128, 0.134);
   }
 }

@@ -1,20 +1,8 @@
 import { useEffect, useState } from "react";
-import ExpandIcon, { Sx } from "../../expand/ExpandIcon";
+import ExpandIcon from "../../icons/expand/ExpandIcon";
 import Button from "../../button/Button";
-import "./input.css";
 import React from "react";
-
-type InputProptype = {
-  setTodo: React.Dispatch<React.SetStateAction<string>>;
-  inputPlaceholder: string;
-  sx: Sx;
-};
-
-type Ref = React.LegacyRef<HTMLInputElement> | undefined;
-
-type CurrentTarget = {
-  currentTarget: EventTarget & HTMLInputElement;
-};
+import "./input.css";
 
 const Input = React.forwardRef(({ inputPlaceholder, sx }: InputProptype, ref: Ref) => {
   const [inputvalue, setInputvalue] = useState<string>("");
@@ -33,12 +21,7 @@ const Input = React.forwardRef(({ inputPlaceholder, sx }: InputProptype, ref: Re
         placeholder={inputPlaceholder}
         onChange={handleInputChange}
       />
-      <Button
-        Icon={ExpandIcon}
-        sx={sx}
-        className={"expand-input"}
-        clickCb={() => console.log("expanded")}
-      ></Button>
+      <Button Icon={ExpandIcon} sx={sx} className={"expand-input"} clickCb={() => console.log("expanded")}></Button>
     </div>
   );
 });

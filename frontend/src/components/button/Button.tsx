@@ -1,18 +1,9 @@
-import { Sx } from "../expand/ExpandIcon";
 import "./button.css";
 
-type ButtonPropType = {
-  textContent?: string;
-  Icon?: ({ sx }: { sx: Sx | undefined }) => JSX.Element;
-  clickCb: () => void;
-  sx?: Sx;
-  className: string;
-};
-
-function Button({ textContent, Icon, sx, className, clickCb }: ButtonPropType) {
+function Button({ className, textContent, sx, Icon, clickCb }: ButtonPropsType) {
   return (
     <button type="submit" className={`button ${className}`} onClick={clickCb}>
-      {Icon && Icon({ sx })}
+      <span style={{ width: sx?.width }}>{Icon ? <Icon sx={sx} /> : ""}</span>
       <span>{textContent}</span>
     </button>
   );

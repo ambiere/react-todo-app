@@ -11,3 +11,27 @@
   gap: 3em;
   width: 100vw;
 }
+
+.notification-icon {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  gap: 0.8em;
+}
+
+.checkbox-input {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
