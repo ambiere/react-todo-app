@@ -1,0 +1,20 @@
+@layer header {
+  .header {
+    display: grid;
+    place-items: center;
+    position: relative;
+    height: 16em;
+    background: var(--background-color-light);
+    z-index: 99;
+  }
+
+  .header::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    border-bottom: 1px solid var(--border-color-light);
+    opacity: 0.3;
+  }
+}

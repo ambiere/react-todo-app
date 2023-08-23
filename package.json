@@ -1,6 +1,6 @@
 {
   "name": "react-todo-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "React Todo App with full CRUD functionality using a fake REST API (json-server)",
   "main": "index.js",
   "scripts": {

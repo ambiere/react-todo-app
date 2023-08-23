@@ -1,0 +1,38 @@
+@layer modal {
+  .modal-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: fit-content;
+    font-size: 0.8em;
+    background-color: #151414;
+    opacity: 0;
+    visibility: hidden;
+    border: 1px solid rgba(128, 128, 128, 0.386);
+    border-radius: 6px;
+    transform: translate(-72px, -1px);
+    transition: all 250ms ease;
+  }
+
+  .modal-wrapper > div {
+    white-space: pre;
+    cursor: pointer;
+    padding-inline: 0.8em;
+    padding-block: 0.6em;
+  }
+
+  .modal-wrapper > div:first-child {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+
+  .modal-wrapper > div:last-child {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+
+  .modal-wrapper > div:hover {
+    background-color: rgba(128, 128, 128, 0.134);
+  }
+}

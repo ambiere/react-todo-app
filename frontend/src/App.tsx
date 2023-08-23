@@ -1,18 +1,15 @@
-import "./App.css";
-import TodoList from "./TodoList";
-import { GetTodosReducer } from "./TodoReducer";
-import { createTodosCtx } from "./todoContext";
+import { useGetTodosQuery } from "./store/redux-slices/todoSlice";
+import Header from "./views/header/Header";
+import Todo from "./views/main/Todo";
+import "./app.css";
 
 function App() {
-  const [, TodosCtxProvider] = createTodosCtx();
-  const [state, dispatch] = GetTodosReducer();
-
+  const { data: todos = [] } = useGetTodosQuery();
   return (
-    <>
-      <TodosCtxProvider value={{ state, dispatch }}>
-        <TodoList />
-      </TodosCtxProvider>
-    </>
+    <div className="app">
+      <Header />
+      <Todo className="todo-container" todos={todos} />
+    </div>
   );
 }
 

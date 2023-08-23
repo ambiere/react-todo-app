@@ -1,0 +1,40 @@
+:root {
+  --text-color: #eaeaea;
+  --background-color: #151515;
+  --background-color-light: #1a1a1aff;
+  --background-color-white: rgba(255, 255, 255, 0.87);
+  --border-color-light: rgba(124, 124, 124, 0.578);
+  --border-color-dark: rgba(128, 128, 128, 0.2);
+
+  font-family: "Inter", sans-serif;
+  line-height: 1.4;
+  font-size: 10px;
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+*::selection {
+  background: var(--text-color);
+  color: var(--background-color);
+}
