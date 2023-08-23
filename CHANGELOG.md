@@ -1,3 +1,14 @@
+## [1.0.0](https://github.com/zhid0399123/react-todo-app/compare/v0.2.0...v1.0.0) (2023-08-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* **server:** 
+
+### Features
+
+* **server:** modularize json-server for scalability and deployment ([c86e3b1](https://github.com/zhid0399123/react-todo-app/commit/c86e3b14ab28e73c8b083a9b845c779ad6717e6f))
+
 ## [0.2.0](https://github.com/zhid0399123/react-todo-app/compare/v0.1.0...v0.2.0) (2023-08-14)
 
 
