@@ -1,6 +1,6 @@
 {
   "name": "react-todo-app",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React Todo App with full CRUD functionality using a fake REST API (json-server)",
   "main": "index.js",
   "scripts": {
@@ -10,13 +10,10 @@
     "lint": "cd frontend/ && npm run lint",
     "prettier": "cd frontend/ && npm run prettier",
     "version": "cz bump",
-    "postversion": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,tsx,ts}": [
-      "npm run lint",
-      "npm run prettier"
-    ]
+    "postversion": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "backend:ts:check": "cd backend/ && dotenv -v DEV=production tsc -p tsconfig.json",
+    "backend:build": "cd backend/ && dotenv -v DEV=production rimraf dist/** && tsc -p tsconfig.json",
+    "backend:add:build": "cd backend/ && git add dist/"
   },
   "repository": {
     "type": "git",
@@ -37,8 +34,9 @@
   },
   "homepage": "https://github.com/zhid0399123/react-todo-app#readme",
   "devDependencies": {
-    "husky": "^8.0.3",
     "concurrently": "^8.2.0",
-    "lint-staged": "^13.2.3"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "rimraf": "^5.0.1"
   }
 }
