@@ -17,3 +17,5 @@ server.use(router);
 server.listen(process.env.PORT, () => {
   console.log(`json-server is running on http://localhost:${process.env.PORT}`);
 });
+
+export default server;
