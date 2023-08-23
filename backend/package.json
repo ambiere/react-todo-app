@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "backend": "json-server --watch database/db.json"
+    "backend": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
   },
   "keywords": [
     "json-server"
@@ -13,6 +13,19 @@
   "author": "zhid0399123",
   "license": "MIT",
   "devDependencies": {
-    "json-server": "^0.17.3"
+    "@types/cors": "^2.8.13",
+    "@types/json-server": "^0.14.4",
+    "@types/node": "^20.5.3",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "concurrently": "^8.2.1",
+    "eslint": "^8.47.0",
+    "json-server": "^0.17.3",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "json-serve": "^0.1.0"
   }
 }
