@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/zhid0399123/react-todo-app/compare/v1.0.0...v1.1.0) (2023-08-23)
+
+
+### Features
+
+* **eslint:** configured eslint ([dbfcb1d](https://github.com/zhid0399123/react-todo-app/commit/dbfcb1db17e302c9bd5ad14dc380bc6e0c15e673))
+
 ## [1.0.0](https://github.com/zhid0399123/react-todo-app/compare/v0.2.0...v1.0.0) (2023-08-23)
 
 

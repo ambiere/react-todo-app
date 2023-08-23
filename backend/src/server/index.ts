@@ -6,7 +6,14 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 const server = jsonServer.create();
-const router = jsonServer.router(path.join(__dirname, "db.json"));
+const router = jsonServer.router(
+  path.join(
+    __dirname,
+    process.env.DEV === "production"
+      ? "../../src/database/db.json"
+      : "../database/db.json"
+  )
+);
 const middlewares = jsonServer.defaults();
 
 server.use(cors());
@@ -15,7 +22,6 @@ server.use(middlewares);
 server.use(router);
 
 server.listen(process.env.PORT, () => {
-  console.log(
-    `json-server is currently running on http://localhost:${process.env.PORT}`
-  );
+  console.log(`json-server is running on http://localhost:${process.env.PORT}`);
+  console.log(process.env.DEV);
 });

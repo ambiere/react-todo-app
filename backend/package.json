@@ -4,9 +4,10 @@
   "description": "fake REST API json-server backend",
   "main": "index.js",
   "scripts": {
+    "start": "dotenv -v DEV=development nodemon src/server/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc server/index.ts --watch && node dist/index.js",
-    "backend": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+    "build": "npx tsc --watch",
+    "backend": "dotenv -v DEV=production concurrently \"npx tsc --watch\" \"nodemon -q dist/server/index.js\""
   },
   "keywords": [
     "json-server"
@@ -22,7 +23,8 @@
     "concurrently": "^8.2.1",
     "eslint": "^8.47.0",
     "json-server": "^0.17.3",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
   },
   "dependencies": {
     "cors": "^2.8.5",
